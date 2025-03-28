@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas - Técnicas de Diseños de Algoritmos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --complete-color: #4CAF50;
+            --pending-color: #FF9800;
+            --link-color: #4361ee;
+            --bg-color: #f5f7ff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .practice-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .practice-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .practice-link {
+            flex-grow: 1;
+            color: var(--link-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+
+        .practice-link:hover {
+            background: #f0f2ff;
+        }
+
+        .status-icon {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+        .complete {
+            background-color: var(--complete-color);
+            color: white;
+        }
+
+        .pending {
+            background-color: var(--pending-color);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prácticas - Paradigmas de Programación</h1>
+        
+        <ul class="practice-list">
+            <li class="practice-item">
+                <a href="#" class="practice-link">Práctica 1</a>
+                <div class="status-icon pending">
+                    <i class="fas fa-clock fa-xs"></i>
+                </div>
+            </li>
+            
+        </ul>
+
+        <footer>
+            © 2025 - Bocanegra Oscar Iván
+        </footer>
+    </div>
+</body>
+</html>
