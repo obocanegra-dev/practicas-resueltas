@@ -209,8 +209,6 @@ Notar que si la entrada es una lista de N listas, todas de longitud M, la salida
 <span class="token hvariable">trasponer</span> <span class="token hvariable">m</span> <span class="token operator">=</span> <span class="token builtin">foldr</span> <span class="token punctuation">(</span><span class="token operator">\</span><span class="token hvariable">xs</span> <span class="token hvariable">rec</span> <span class="token operator">-&gt;</span> <span class="token builtin">zipWith</span> <span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">)</span> <span class="token hvariable">xs</span> <span class="token hvariable">rec</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">replicate</span> <span class="token punctuation">(</span><span class="token builtin">length</span> <span class="token punctuation">(</span><span class="token builtin">head</span> <span class="token hvariable">m</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token hvariable">m</span>
 </code></pre>
 <hr>
-<p>Aquí tienes los enunciados que mencionas copiados para ti:</p>
-<hr>
 <p><strong>Ejercicio 9 ⋆</strong></p>
 <p>i. Definir y dar el tipo del esquema de recursión <code>foldNat</code> sobre los naturales. Utilizar el tipo <code>Integer</code> de Haskell (la función va a estar definida sólo para los enteros mayores o iguales que 0).</p>
 <p>ii. Utilizando <code>foldNat</code>, definir la función <code>potencia</code>.</p>
