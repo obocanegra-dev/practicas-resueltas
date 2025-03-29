@@ -12,25 +12,25 @@
   <div class="stackedit__html"><h2 id="práctica-1">Práctica 1</h2>
 <p><strong>Ejercicio 1.</strong><br>
 Sea Σ = {𝑎, 𝑏} un alfabeto. Hallar:<br>
-Σ⁰, Σ¹, Σ², Σ∗, Σ⁺, |Σ|, |Σ⁰| (|𝐴| indica la cantidad de elementos de 𝐴).</p>
+Σ⁰, Σ¹, Σ², Σ*, Σ⁺, |Σ|, |Σ⁰| (|𝐴| indica la cantidad de elementos de 𝐴).</p>
 <ul>
 <li>Σ⁰ = {𝜆}</li>
 <li>Σ¹ = Σ = {𝑎, 𝑏}</li>
 <li>Σ² = {𝑎𝑎, 𝑎𝑏, 𝑏𝑎, 𝑏𝑏}</li>
-<li>Σ∗ = {𝜆, 𝑎, 𝑏, 𝑎𝑎, 𝑎𝑏, 𝑏𝑎, 𝑏𝑏…} = Σ⁰ ∪ Σ¹ ∪ Σ² ∪ Σ³…</li>
-<li>Σ⁺ = Σ∗ - Σ⁰ = Σ∗ - {𝜆}</li>
+<li>Σ* = {𝜆, 𝑎, 𝑏, 𝑎𝑎, 𝑎𝑏, 𝑏𝑎, 𝑏𝑏…} = Σ⁰ ∪ Σ¹ ∪ Σ² ∪ Σ³…</li>
+<li>Σ⁺ = Σ* - Σ⁰ = Σ* - {𝜆}</li>
 <li>|Σ| = |{𝑎, 𝑏}| = 2</li>
 <li>|Σ⁰| = |{𝜆}| = 1</li>
 </ul>
 <hr>
 <p><strong>Ejercicio 2.</strong><br>
 Decidir si, dado Σ = {𝑎, 𝑏}, vale:<br>
-𝜆 ∈ Σ, 𝜆 ⊆ Σ, 𝜆 ∈ Σ⁺, 𝜆 ∈ Σ∗, Σ⁰ = 𝜆, Σ⁰ = {𝜆}</p>
+𝜆 ∈ Σ, 𝜆 ⊆ Σ, 𝜆 ∈ Σ⁺, 𝜆 ∈ Σ*, Σ⁰ = 𝜆, Σ⁰ = {𝜆}</p>
 <ul>
 <li>𝜆 ∈ Σ: Falso</li>
 <li>𝜆 ⊆ Σ: Falso</li>
 <li>𝜆 ∈ Σ⁺: Falso</li>
-<li>𝜆 ∈ Σ∗: Verdadero</li>
+<li>𝜆 ∈ Σ*: Verdadero</li>
 <li>Σ⁰ = 𝜆: Falso</li>
 <li>Σ⁰ = {𝜆}: Verdadero</li>
 </ul>
@@ -62,7 +62,7 @@ Sean las cadenas 𝛼 = 𝑎𝑏𝑏 y 𝛽 = 𝑎𝑐𝑏. Calcular:<br>
 </ul>
 <hr>
 <p><strong>Ejercicio 5.</strong><br>
-Dado un alfabeto Σ, sean 𝑥, 𝑦 ∈ Σ y 𝛼, 𝛽 ∈ Σ∗. Demostrar que:<br>
+Dado un alfabeto Σ, sean 𝑥, 𝑦 ∈ Σ y 𝛼, 𝛽 ∈ Σ*. Demostrar que:<br>
 a. |𝑥.(𝑦.𝛼)| = 2 + |𝛼|<br>
 Por inducción estructural sobre 𝛼:</p>
 <ul>
@@ -199,9 +199,9 @@ a. ℒ₁ ∪ ℒ₂</p>
 <ul>
 <li>(ℒ₁.ℒ₂)⁺ = {𝑎𝑎𝑎𝑎, 𝑎𝑏𝑐, 𝑏𝑐𝑎𝑎𝑎, 𝑏𝑐𝑏𝑐, 𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎, 𝑎𝑎𝑎𝑎𝑎𝑏𝑐, 𝑎𝑎𝑎𝑎𝑏𝑐𝑎𝑎𝑎…} = (ℒ₁.ℒ₂)¹ ∪ (ℒ₁.ℒ₂)² ∪ (ℒ₁.ℒ₂)³…</li>
 </ul>
-<p>h. (ℒ₁.ℒ₂)∗</p>
+<p>h. (ℒ₁.ℒ₂)*</p>
 <ul>
-<li>(ℒ₁.ℒ₂)∗ = (ℒ₁.ℒ₂)⁺ ∪ {𝜆} = {𝜆, 𝑎𝑎𝑎𝑎, 𝑎𝑏𝑐, 𝑏𝑐𝑎𝑎𝑎, 𝑏𝑐𝑏𝑐, 𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎, 𝑎𝑎𝑎𝑎𝑎𝑏𝑐, 𝑎𝑎𝑎𝑎𝑏𝑐𝑎𝑎𝑎…} = (ℒ₁.ℒ₂)⁰ ∪ (ℒ₁.ℒ₂)¹ ∪ (ℒ₁.ℒ₂)² ∪ (ℒ₁.ℒ₂)³…</li>
+<li>(ℒ₁.ℒ₂)* = (ℒ₁.ℒ₂)⁺ ∪ {𝜆} = {𝜆, 𝑎𝑎𝑎𝑎, 𝑎𝑏𝑐, 𝑏𝑐𝑎𝑎𝑎, 𝑏𝑐𝑏𝑐, 𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎, 𝑎𝑎𝑎𝑎𝑎𝑏𝑐, 𝑎𝑎𝑎𝑎𝑏𝑐𝑎𝑎𝑎…} = (ℒ₁.ℒ₂)⁰ ∪ (ℒ₁.ℒ₂)¹ ∪ (ℒ₁.ℒ₂)² ∪ (ℒ₁.ℒ₂)³…</li>
 </ul>
 <p>i. ℒ₁.Λ.ℒ₂</p>
 <ul>
@@ -224,33 +224,33 @@ a. ℒ₁ ∪ ℒ₂</p>
 Determinar el complemento de los siguientes lenguajes, considerando los alfabetos indicados en cada caso.<br>
 a. ℒ = Λ para Σ = {𝑎, 𝑏}</p>
 <ul>
-<li>ℒ ᶜ = ℒ ∗ - Λ = ℒ ∗ - {𝜆} = ℒ ⁺</li>
+<li>ℒ ᶜ = ℒ * - Λ = ℒ * - {𝜆} = ℒ ⁺</li>
 </ul>
 <p>b. ℒ = {𝜆, 𝑎} para Σ = {𝑎} y Σ = {𝑎, 𝑏}</p>
 <ul>
-<li>Para Σ = {𝑎} : ℒ ᶜ = ℒ ∗ - ℒ  = ℒ ∗ - {𝜆, 𝑎} = {𝑎𝑎, 𝑎𝑎𝑎, 𝑎𝑎𝑎} = {𝑎ⁿ | 𝑛 ≥ 2}</li>
-<li>Para Σ = {𝑎, 𝑏} : ℒ ᶜ = ℒ ∗ - ℒ  = ℒ ∗ - {𝜆, 𝑎} = {𝑎ⁿ | 𝑛 ≥ 2} ∪ {𝑎ⁿ𝑏ᵐ | 𝑛 ≥ 0 ∧ 𝑚 ≥ 1}</li>
+<li>Para Σ = {𝑎} : ℒ ᶜ = ℒ * - ℒ  = ℒ * - {𝜆, 𝑎} = {𝑎𝑎, 𝑎𝑎𝑎, 𝑎𝑎𝑎} = {𝑎ⁿ | 𝑛 ≥ 2}</li>
+<li>Para Σ = {𝑎, 𝑏} : ℒ ᶜ = ℒ * - ℒ  = ℒ * - {𝜆, 𝑎} = {𝑎ⁿ | 𝑛 ≥ 2} ∪ {𝑎ⁿ𝑏ᵐ | 𝑛 ≥ 0 ∧ 𝑚 ≥ 1}</li>
 </ul>
-<p>c. ℒ = {𝑏𝛼 | 𝛼 ∈ {𝑎, 𝑏}∗} para Σ = {𝑎, 𝑏}</p>
+<p>c. ℒ = {𝑏𝛼 | 𝛼 ∈ {𝑎, 𝑏}*} para Σ = {𝑎, 𝑏}</p>
 <ul>
-<li>ℒ ᶜ = ℒ ∗ - ℒ = ℒ ∗ - {𝑏𝛼 | 𝛼 ∈ {𝑎, 𝑏}∗} = {𝑎𝛼 | 𝛼 ∈ {𝑎, 𝑏}∗} ∪ {𝜆}</li>
+<li>ℒ ᶜ = ℒ * - ℒ = ℒ * - {𝑏𝛼 | 𝛼 ∈ {𝑎, 𝑏}*} = {𝑎𝛼 | 𝛼 ∈ {𝑎, 𝑏}*} ∪ {𝜆}</li>
 </ul>
 <p>d. ℒ = {𝑎²ⁿ | 𝑛 ≥ 0} para Σ = {𝑎} y Σ = {𝑎, 𝑏}</p>
 <ul>
-<li>Para Σ = {𝑎} : ℒ ᶜ = ℒ ∗ - ℒ  = ℒ ∗ - {𝑎²ⁿ | 𝑛 ≥ 0} = {𝑎²ⁿ⁺¹ | 𝑛 ≥ 0}</li>
-<li>Para Σ = {𝑎, 𝑏} : ℒ ᶜ = ℒ ∗ - ℒ  = ℒ ∗ - {𝑎²ⁿ | 𝑛 ≥ 0} = {𝑎²ⁿ⁺¹ | 𝑛 ≥ 0} ∪ {𝛼 ∈ {𝑎, 𝑏}∗ | |𝛼|<sub>𝑏</sub> ≥ 1}</li>
+<li>Para Σ = {𝑎} : ℒ ᶜ = ℒ * - ℒ  = ℒ * - {𝑎²ⁿ | 𝑛 ≥ 0} = {𝑎²ⁿ⁺¹ | 𝑛 ≥ 0}</li>
+<li>Para Σ = {𝑎, 𝑏} : ℒ ᶜ = ℒ * - ℒ  = ℒ * - {𝑎²ⁿ | 𝑛 ≥ 0} = {𝑎²ⁿ⁺¹ | 𝑛 ≥ 0} ∪ {𝛼 ∈ {𝑎, 𝑏}* | |𝛼|<sub>𝑏</sub> ≥ 1}</li>
 </ul>
-<p>e. ℒ = {𝛼₁𝑏𝛼₂ | 𝛼₁, 𝛼₂ ∈ {𝑎, 𝑏}∗ ∧ |𝛼₁| &gt; |𝛼₂|} para Σ = {𝑎, 𝑏}</p>
+<p>e. ℒ = {𝛼₁𝑏𝛼₂ | 𝛼₁, 𝛼₂ ∈ {𝑎, 𝑏}* ∧ |𝛼₁| &gt; |𝛼₂|} para Σ = {𝑎, 𝑏}</p>
 <ul>
-<li>ℒ ᶜ = ℒ ∗ - ℒ = ℒ ∗ - {𝛼₁𝑏𝛼₂ | 𝛼₁, 𝛼₂ ∈ {𝑎, 𝑏}∗ ∧ |𝛼₁| &gt; |𝛼₂|} = {𝛼 ∈ {𝑎, 𝑏}∗ | |𝛼|<sub>𝑏</sub> = 0} ∪ {𝛼₁𝑏𝛼₂ | 𝛼₁, 𝛼₂ ∈ {𝑎, 𝑏}∗ ∧ |𝛼₁| ≤ |𝛼₂|}</li>
+<li>ℒ ᶜ = ℒ * - ℒ = ℒ * - {𝛼₁𝑏𝛼₂ | 𝛼₁, 𝛼₂ ∈ {𝑎, 𝑏}* ∧ |𝛼₁| &gt; |𝛼₂|} = {𝛼 ∈ {𝑎, 𝑏}* | |𝛼|<sub>𝑏</sub> = 0} ∪ {𝛼₁𝑏𝛼₂ | 𝛼₁, 𝛼₂ ∈ {𝑎, 𝑏}* ∧ |𝛼₁| ≤ |𝛼₂|}</li>
 </ul>
 <hr>
 <p><strong>Ejercicio 10.</strong><br>
 Sea ℒ, ℒ₁, ℒ₂ lenguajes cualesquiera. Determinar si las siguientes afirmaciones son verdaderas o falsas. Si son verdaderas, demostrarlas. Si no, dar un contraejemplo.<br>
 a. ℒ ⁺ ⊆ ℒ ⁺</p>
 <p>Verdadera. Todo conjunto es subconjunto de sí mismo.</p>
-<p>b. ℒ ⁺ ⊊ ℒ ∗</p>
-<p>Falso. Contraejemplo: ℒ = {𝜆, 𝑎}. {𝜆, 𝑎}⁺ = {𝜆, 𝑎}∗.</p>
+<p>b. ℒ ⁺ ⊊ ℒ *</p>
+<p>Falso. Contraejemplo: ℒ = {𝜆, 𝑎}. {𝜆, 𝑎}⁺ = {𝜆, 𝑎}*.</p>
 <p>c. ℒ ⁿℒ ᵐ = ℒ ⁿ⁺ᵐ para todo 𝑛, 𝑚 ≥ 0</p>
 <p>Veradero. Por inducción en n:</p>
 <ul>
@@ -269,33 +269,33 @@ a. ℒ ⁺ ⊆ ℒ ⁺</p>
 <li>Caso inductivo: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77777em; vertical-align: -0.08333em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span></span></span></span></span>. Supongo que vale para <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span></span></span></span></span>.<br>
 (ℒ₁)ᵏ⁺¹ = (ℒ₁)ᵏ.ℒ₁, (ℒ₂)ᵏ⁺¹ = (ℒ₂)ᵏ.ℒ₂. Por hipótesis inductiva (ℒ₁)ᵏ ⊆ (ℒ₂)ᵏ, y como ℒ₁ ⊆ ℒ₂, se concluye que (ℒ₁)ᵏ⁺¹ ⊆ (ℒ₂)ᵏ⁺¹ ⇔ (ℒ₁)ⁿ ⊆ (ℒ₂)ⁿ.</li>
 </ul>
-<p>f. ℒ₁ ⊆ ℒ₂ ⟹ (ℒ₁)∗ ⊆ (ℒ₂)∗</p>
+<p>f. ℒ₁ ⊆ ℒ₂ ⟹ (ℒ₁)* ⊆ (ℒ₂)*</p>
 <p>Verdadero. Se deduce de la definición de clausura de Kleene y el inciso anterior.</p>
-<p>g. (ℒ ∗)∗ = ℒ ∗</p>
+<p>g. (ℒ *)* = ℒ *</p>
 <p>Verdadero. Probemos la doble inclusión:</p>
 <ul>
-<li>ℒ ∗ ⊆ (ℒ ∗)∗<br>
-Sea 𝑥 ∈ ℒ ∗, 𝑥 es una concatenación de cadenas de ℒ, así que 𝑥 ∈ (ℒ ∗)∗.</li>
-<li>(ℒ∗)∗ ⊆ ℒ ∗<br>
-Sea 𝑥 ∈ (ℒ ∗)∗, 𝑥 es una concatenación de cadenas 𝑥 de ℒ, así que 𝑥₁𝑥₂…𝑥ₖ con 𝑥ᵢ ∈ ℒ ∗. Cada 𝑥ᵢ es una concatenación de cadenas de ℒ, así que 𝑥 ∈ ℒ ∗.</li>
+<li>ℒ * ⊆ (ℒ *)*<br>
+Sea 𝑥 ∈ ℒ *, 𝑥 es una concatenación de cadenas de ℒ, así que 𝑥 ∈ (ℒ *)*.</li>
+<li>(ℒ*)* ⊆ ℒ *<br>
+Sea 𝑥 ∈ (ℒ *)*, 𝑥 es una concatenación de cadenas 𝑥 de ℒ, así que 𝑥₁𝑥₂…𝑥ₖ con 𝑥ᵢ ∈ ℒ *. Cada 𝑥ᵢ es una concatenación de cadenas de ℒ, así que 𝑥 ∈ ℒ *.</li>
 </ul>
-<p>h. (ℒ ⁺)⁺ = ℒ ∗</p>
-<p>Falso. Contraejemplo: ℒ = {𝑎, 𝑏}. 𝜆 ∈ ℒ ∗, pero 𝜆 ∉ (ℒ ⁺)⁺.</p>
-<p>i. (ℒ ⁺)∗ = ℒ ∗</p>
+<p>h. (ℒ ⁺)⁺ = ℒ *</p>
+<p>Falso. Contraejemplo: ℒ = {𝑎, 𝑏}. 𝜆 ∈ ℒ *, pero 𝜆 ∉ (ℒ ⁺)⁺.</p>
+<p>i. (ℒ ⁺)* = ℒ *</p>
 <p>Verdadero.  Probemos las inclusiones:</p>
 <ul>
-<li>ℒ ⁺ ⊆ ℒ ∗: ℒ ⁺ son todas las cadenas no vacías formadas por ℒ, y ℒ ∗ incluye todas las cadenas, incluyendo la vacía.</li>
-<li>(ℒ ⁺)∗ ⊆ ℒ ∗: las cadenas en (ℒ ⁺)∗ son concatenaciones de cadenas no vacías de ℒ, por lo que están en ℒ ∗.</li>
-<li>ℒ ∗ ⊆ (ℒ ⁺)∗: cualquier cadena de ℒ∗ (incluyendo la vacía) puede ser vista como una concatenación de elementos de (ℒ ⁺)∗.</li>
+<li>ℒ ⁺ ⊆ ℒ *: ℒ ⁺ son todas las cadenas no vacías formadas por ℒ, y ℒ * incluye todas las cadenas, incluyendo la vacía.</li>
+<li>(ℒ ⁺)* ⊆ ℒ *: las cadenas en (ℒ ⁺)* son concatenaciones de cadenas no vacías de ℒ, por lo que están en ℒ *.</li>
+<li>ℒ * ⊆ (ℒ ⁺)*: cualquier cadena de ℒ* (incluyendo la vacía) puede ser vista como una concatenación de elementos de (ℒ ⁺)*.</li>
 </ul>
-<p>j. (ℒ₁ ∪ ℒ₂)∗ = (ℒ₁)∗ ∪ (ℒ₂)∗</p>
-<p>Falso. Contraejemplo: ℒ₁ = {𝑎}, ℒ₂ = {𝑏}, 𝑎𝑏 ∈ (ℒ₁ ∪ ℒ₂)∗, pero 𝑎𝑏 ∉ (ℒ₁)∗ ∪ (ℒ₂)∗.</p>
-<p>k. (ℒ₁ ∩ ℒ₂)∗ = (ℒ₁)∗ ∩ (ℒ₂)∗</p>
-<p>Falso. Contraejemplo: ℒ₁ = {𝑎𝑎, 𝑏}, ℒ₂ = {𝑎, 𝑏𝑏}, (ℒ₁ ∩ ℒ₂)∗ = ∅∗ = {𝜆}, mientras que (ℒ₁)∗ ∩ (ℒ₂)∗ contiene por ejemplo 𝑎𝑎𝑏𝑏, entre otras cadenas.</p>
-<p>l. (ℒ ²)∗ = ℒ ∗</p>
-<p>Falso. Contraejemplo: ℒ = {𝑎}, 𝑎 ∈ ℒ ∗, pero 𝑎 ∉ (ℒ ²)∗.</p>
-<p>m. (ℒ ∪ ℒ₂)∗ = ℒ ∗</p>
-<p>Falso. Contraejemplo: ℒ = {𝑎}, ℒ₂ = {𝑏}, 𝑎𝑏 ∈ (ℒ ∪ ℒ₂)∗, pero 𝑎𝑏 ∉ ℒ ∗.</p>
+<p>j. (ℒ₁ ∪ ℒ₂)* = (ℒ₁)* ∪ (ℒ₂)*</p>
+<p>Falso. Contraejemplo: ℒ₁ = {𝑎}, ℒ₂ = {𝑏}, 𝑎𝑏 ∈ (ℒ₁ ∪ ℒ₂)*, pero 𝑎𝑏 ∉ (ℒ₁)* ∪ (ℒ₂)*.</p>
+<p>k. (ℒ₁ ∩ ℒ₂)* = (ℒ₁)* ∩ (ℒ₂)*</p>
+<p>Falso. Contraejemplo: ℒ₁ = {𝑎𝑎, 𝑏}, ℒ₂ = {𝑎, 𝑏𝑏}, (ℒ₁ ∩ ℒ₂)* = ∅* = {𝜆}, mientras que (ℒ₁)* ∩ (ℒ₂)* contiene por ejemplo 𝑎𝑎𝑏𝑏, entre otras cadenas.</p>
+<p>l. (ℒ ²)* = ℒ *</p>
+<p>Falso. Contraejemplo: ℒ = {𝑎}, 𝑎 ∈ ℒ *, pero 𝑎 ∉ (ℒ ²)*.</p>
+<p>m. (ℒ ∪ ℒ₂)* = ℒ *</p>
+<p>Falso. Contraejemplo: ℒ = {𝑎}, ℒ₂ = {𝑏}, 𝑎𝑏 ∈ (ℒ ∪ ℒ₂)*, pero 𝑎𝑏 ∉ ℒ *.</p>
 <p>n. (ℒ ⁿ)ʳ = (ℒ ʳ)ⁿ para todo 𝑛 ≥ 0</p>
 <p>Verdadero. Por inducción en n:</p>
 <ul>
@@ -304,7 +304,7 @@ Sea 𝑥 ∈ (ℒ ∗)∗, 𝑥 es una concatenación de cadenas 𝑥 de ℒ, as
 <li>Caso inductivo: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77777em; vertical-align: -0.08333em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span></span></span></span></span>. Supongo que vale para <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span></span></span></span></span>.<br>
 (ℒ ⁿ)ʳ = (ℒ ᵏ⁺¹)ʳ = (ℒ ᵏℒ )ʳ = ℒ ʳ.(ℒ ᵏ)ʳ =ᴴᴵ ℒ ʳ.(ℒ ʳ)ᵏ = (ℒ ʳ)ᵏ⁺¹ = (ℒ ʳ)ⁿ</li>
 </ul>
-<p>ñ. (ℒ∗)ʳ = (ℒ ʳ)∗</p>
+<p>ñ. (ℒ*)ʳ = (ℒ ʳ)*</p>
 <p>Verdadero. Se deduce de la definición de clausura de Kleene y el inciso anterior.</p>
 <hr>
 <p><strong>Ejercicio 11.</strong><br>
