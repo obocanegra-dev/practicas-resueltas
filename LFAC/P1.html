@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="práctica-1">Práctica 1</h2>
+<p><strong>Ejercicio 1.</strong><br>
+Sea Σ = {𝑎, 𝑏} un alfabeto. Hallar:<br>
+Σ⁰, Σ¹, Σ², Σ∗, Σ⁺, |Σ|, |Σ⁰| (|𝐴| indica la cantidad de elementos de 𝐴).</p>
+<ul>
+<li>Σ⁰ = {𝜆}</li>
+<li>Σ¹ = Σ = {𝑎, 𝑏}</li>
+<li>Σ² = {𝑎𝑎, 𝑎𝑏, 𝑏𝑎, 𝑏𝑏}</li>
+<li>Σ∗ = {𝜆, 𝑎, 𝑏, 𝑎𝑎, 𝑎𝑏, 𝑏𝑎, 𝑏𝑏…} = Σ⁰ ∪ Σ¹ ∪ Σ² ∪ Σ³…</li>
+<li>Σ⁺ = Σ∗ - Σ⁰ = Σ∗ - {𝜆}</li>
+<li>|Σ| = |{𝑎, 𝑏}| = 2</li>
+<li>|Σ⁰| = |{𝜆}| = 1</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 2.</strong><br>
+Decidir si, dado Σ = {𝑎, 𝑏}, vale:<br>
+𝜆 ∈ Σ, 𝜆 ⊆ Σ, 𝜆 ∈ Σ⁺, 𝜆 ∈ Σ∗, Σ⁰ = 𝜆, Σ⁰ = {𝜆}</p>
+<ul>
+<li>𝜆 ∈ Σ: Falso</li>
+<li>𝜆 ⊆ Σ: Falso</li>
+<li>𝜆 ∈ Σ⁺: Falso</li>
+<li>𝜆 ∈ Σ∗: Verdadero</li>
+<li>Σ⁰ = 𝜆: Falso</li>
+<li>Σ⁰ = {𝜆}: Verdadero</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 3.</strong><br>
+Sea 𝛼 = 𝑎𝑏𝑏 una cadena. Calcular:<br>
+𝛼⁰, 𝛼¹, 𝛼², 𝛼³, ∏ₖ₌₀,…,₃ 𝛼ᵏ = 𝛼⁰.𝛼¹.𝛼².𝛼³, 𝛼ʳ</p>
+<ul>
+<li>𝛼⁰ = 𝜆</li>
+<li>𝛼¹ = 𝛼 = 𝑎𝑏𝑏</li>
+<li>𝛼² = 𝛼𝛼 = 𝑎𝑏𝑏𝑎𝑏𝑏</li>
+<li>𝛼³ = 𝛼𝛼𝛼 = 𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑏𝑏</li>
+<li>∏ₖ₌₀,…,₃ 𝛼ᵏ = 𝛼⁰.𝛼¹.𝛼².𝛼³ = 𝜆𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑏𝑏 = 𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑏𝑏</li>
+<li>𝛼ʳ = (𝑎𝑏𝑏)ʳ = 𝑏𝑏𝑎</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 4.</strong><br>
+Sean las cadenas 𝛼 = 𝑎𝑏𝑏 y 𝛽 = 𝑎𝑐𝑏. Calcular:<br>
+𝛼𝛽, (𝛼𝛽)ʳ, 𝛽ʳ, 𝛽ʳ𝛼ʳ, 𝜆𝛼, 𝜆𝛽, 𝛼𝜆𝛽, 𝛼²𝜆³𝛽²</p>
+<ul>
+<li>𝛼𝛽 = 𝑎𝑏𝑏𝑎𝑐𝑏</li>
+<li>(𝛼𝛽)ʳ = (𝑎𝑏𝑏𝑎𝑐𝑏)ʳ = 𝑏𝑐𝑎𝑏𝑏𝑎</li>
+<li>𝛽ʳ = (𝑎𝑐𝑏)ʳ = 𝑏𝑐𝑎</li>
+<li>𝛽ʳ𝛼ʳ = (𝑎𝑐𝑏)ʳ(𝑎𝑏𝑏)ʳ = 𝑏𝑐𝑎𝑏𝑏𝑎 = (𝛼𝛽)ʳ</li>
+<li>𝜆𝛼 = 𝛼 = 𝑎𝑏𝑏</li>
+<li>𝜆𝛽 = 𝛽 = 𝑎𝑐𝑏</li>
+<li>𝛼𝜆𝛽 = 𝛼𝛽 = 𝑎𝑏𝑏𝑎𝑐𝑏</li>
+<li>𝛼²𝜆³𝛽² = 𝛼²𝛽² = 𝛼𝛼𝛽𝛽 = 𝑎𝑏𝑏𝑎𝑏𝑏𝑎𝑐𝑏𝑎𝑐𝑏</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 5.</strong><br>
+Dado un alfabeto Σ, sean 𝑥, 𝑦 ∈ Σ y 𝛼, 𝛽 ∈ Σ∗. Demostrar que:<br>
+a. |𝑥.(𝑦.𝛼)| = 2 + |𝛼|<br>
+Por inducción estructural sobre 𝛼:</p>
+<ul>
+<li>Caso base: 𝛼 = 𝜆<br>
+|𝑥.(𝑦.𝛼)| = |𝑥.(𝑦.𝜆)| = |𝑥.𝑦| = 2 = 2 + 0 = 2 + |𝜆| = 2 + |𝛼|</li>
+<li>Caso inductivo: 𝛼 = 𝛼´.𝑧. Supongo que vale para 𝛼´.<br>
+|𝑥.(𝑦.𝛼)| = |𝑥.(𝑦.𝛼´.𝑧)| = |𝑥.𝑦.𝛼´| + |𝑧| =ᴴᴵ 2 + |𝛼´| + |𝑧| = 2 + |𝛼´.𝑧| = 2 + |𝛼|</li>
+</ul>
+<p>b. |𝛼ʳ| = |𝛼|<br>
+Por inducción estructural sobre 𝛼:</p>
+<ul>
+<li>Caso base: 𝛼 = 𝜆<br>
+|𝛼ʳ| = |𝜆ʳ| = |𝜆| = |𝛼|</li>
+<li>Caso inductivo: 𝛼 = 𝛼´.𝑥. Supongo que vale para 𝛼´.<br>
+|𝛼ʳ| = |(𝛼´.𝑥)ʳ| = |𝑥ʳ.𝛼´ʳ| = |𝑥ʳ| + |𝛼´ʳ| =ᴴᴵ |𝑥ʳ| + |𝛼´| = |𝛼´| + |𝑥ʳ| = |𝛼´| + |𝑥| = |𝛼´.𝑥| = |𝛼|</li>
+</ul>
+<p>c. |𝛼𝑥𝛽| = |𝑥𝛼𝛽|<br>
+Por inducción estructural sobre 𝛼:</p>
+<ul>
+<li>Caso base: 𝛼 = 𝜆<br>
+|𝛼𝑥𝛽| = |𝜆𝑥𝛽| = |𝜆| + |𝑥| + |𝛽| = 0 + |𝑥| + |𝛽| = |𝑥| + 0 + |𝛽| = |𝑥| + |𝜆|  + |𝛽| = |𝑥𝜆𝛽| = |𝑥𝛼𝛽|</li>
+<li>Caso inductivo: 𝛼 = 𝛼´.𝑦. Supongo que vale para 𝛼´.<br>
+|𝛼𝑥𝛽| = |𝛼´.𝑦𝑥𝛽| = |𝛼´| + |𝑦| + |𝑥| + |𝛽| = |𝑦| + |𝛼´| + |𝑥| + |𝛽| = |𝑦| + |𝛼´𝑥𝛽| =ᴴᴵ |𝑦| + |𝑥𝛼´𝛽| = |𝑦| + |𝑥| + |𝛼´| + |𝛽| = |𝑥| + |𝛼´| + |𝑦| + |𝛽| = |𝑥𝛼´.𝑦𝛽| = |𝑥𝛼𝛽|</li>
+</ul>
+<p>d. |𝛼.𝛼| = 2|𝛼|<br>
+Por inducción estructural sobre 𝛼:</p>
+<ul>
+<li>Caso base: 𝛼 = 𝜆<br>
+|𝛼.𝛼| = |𝜆.𝜆| = |𝜆| = 0 = 2 * 0 = 2|𝜆| = 2|𝛼|</li>
+<li>Caso inductivo: 𝛼 = 𝛼´.𝑥. Supongo que vale para 𝛼´.<br>
+|𝛼.𝛼| = |𝛼´.𝑥.𝛼´.𝑥| = |𝛼´| + |𝑥| + |𝛼´| + |𝑥| = |𝛼´| + |𝛼´| + |𝑥| + |𝑥| = |𝛼´.𝛼´| + 2|𝑥| =ᴴᴵ 2|𝛼´| + 2|𝑥| = 2(|𝛼´| + |𝑥|) = 2|𝛼´.𝑥| = 2|𝛼|</li>
+</ul>
+<p>e. (𝛼.𝛽)ʳ = 𝛽ʳ.𝛼ʳ<br>
+Por inducción estructural sobre 𝛼:</p>
+<ul>
+<li>Caso base: 𝛼 = 𝜆<br>
+(𝛼.𝛽)ʳ = (𝜆.𝛽)ʳ = 𝛽ʳ = 𝛽ʳ𝜆 = 𝛽ʳ𝜆ʳ = 𝛽ʳ𝛼ʳ</li>
+<li>Caso inductivo: 𝛼 = 𝑥.𝛼´. Supongo que vale para 𝛼´.<br>
+(𝛼.𝛽)ʳ = (𝑥.𝛼´.𝛽)ʳ = (𝑥.(𝛼´.𝛽))ʳ = (𝛼´.𝛽)ʳ.𝑥 =ᴴᴵ 𝛽ʳ𝛼ʳ.𝑥 = 𝛽ʳ𝛼ʳ.𝑥ʳ = 𝛽ʳ(𝑥.𝛼´)ʳ = 𝛽ʳ𝛼ʳ</li>
+</ul>
+<p>f. (𝛼ʳ)ʳ = 𝛼<br>
+Por inducción estructural sobre 𝛼:</p>
+<ul>
+<li>Caso base: 𝛼 = 𝜆<br>
+(𝛼ʳ)ʳ = (𝜆ʳ)ʳ = 𝜆ʳ = 𝜆 = 𝛼</li>
+<li>Caso inductivo: 𝛼 = 𝛼´.𝑥. Supongo que vale para 𝛼´.<br>
+(𝛼ʳ)ʳ = ((𝛼´.𝑥)ʳ)ʳ = (𝑥ʳ.𝛼´ʳ)ʳ = (𝑥ʳ.𝛼´ʳ)ʳ = (𝛼´ʳ)ʳ.(𝑥ʳ)ʳ =ᴴᴵ 𝛼´.(𝑥ʳ)ʳ = 𝛼´.𝑥 = 𝛼</li>
+</ul>
+<p>g. (𝛼ʳ)ⁿ = (𝛼ⁿ)ʳ (|𝛼| indica la longitud de la cadena 𝛼).<br>
+Por inducción en n:</p>
+<ul>
+<li>Caso base: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">0</span></span></span></span></span><br>
+(𝛼ʳ)ⁿ = (𝛼ʳ)⁰ = (𝛼ʳ)⁰ = 𝜆 = 𝜆ʳ = (𝛼⁰)ʳ = (𝛼ⁿ)ʳ</li>
+<li>Caso inductivo: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">m + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.66666em; vertical-align: -0.08333em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span></span></span></span></span>. Supongo que vale para <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">m</span></span></span></span></span>.<br>
+(𝛼ʳ)ⁿ = (𝛼ʳ)ᵐ⁺¹ = (𝛼ʳ)ᵐ.(𝛼ʳ) =ᴴᴵ (𝛼ᵐ)ʳ.(𝛼ʳ) = (𝛼ᵐ)ʳ.(𝛼¹)ʳ = (𝛼¹.𝛼ᵐ)ʳ = (𝛼¹⁺ᵐ)ʳ = (𝛼ᵐ⁺¹)ʳ = (𝛼ⁿ)ʳ</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 6.</strong><br>
+Dar ejemplos de cadenas que pertenezcan a los siguientes lenguajes:<br>
+a. ℒ = {𝑎ⁿ𝑏ⁿ | 𝑛 ≥ 0}</p>
+<ul>
+<li>𝜆, 𝑎𝑏, 𝑎𝑎𝑏𝑏, 𝑎𝑎𝑎𝑏𝑏𝑏</li>
+</ul>
+<p>b. ℒ = {𝑎ⁿ𝑏ⁿ | 𝑛 ≥ 1}</p>
+<ul>
+<li>𝑎𝑏, 𝑎𝑎𝑏𝑏, 𝑎𝑎𝑎𝑏𝑏𝑏, 𝑎𝑎𝑎𝑎𝑏𝑏𝑏𝑏</li>
+</ul>
+<p>c. ℒ = {𝑎ⁿ𝑏ᵐ | 𝑛 ≥ 1 ∧ 𝑚 ≥ 1}</p>
+<ul>
+<li>𝑎𝑏, 𝑎𝑎𝑏, 𝑎𝑏𝑏, 𝑎𝑎𝑏𝑏, 𝑎𝑏𝑏𝑏, 𝑎𝑎𝑎𝑏</li>
+</ul>
+<p>d. ℒ = {𝑎ⁿ𝑏ᵐ | 𝑛 ≥ 1 ∧ 𝑚 ≥ 0}</p>
+<ul>
+<li>𝑎, 𝑎𝑎, 𝑎𝑎𝑎, 𝑎𝑏, 𝑎𝑎𝑏, 𝑎𝑏𝑏, 𝑎𝑎𝑏𝑏, 𝑎𝑏𝑏𝑏</li>
+</ul>
+<p>e. ℒ = {𝑎ⁿ(𝑎𝑐)ᵖ(𝑏𝑎𝑏)ᵖ | 𝑛 ≥ 0 ∧ 𝑝 = 𝑞 + 2 ∧ 𝑝 ≥ 1}</p>
+<ul>
+<li>𝑎𝑐𝑎𝑐𝑎𝑐𝑏𝑎𝑏, 𝑎𝑎𝑐𝑎𝑐𝑎𝑐𝑏𝑎𝑏, 𝑎𝑐𝑎𝑐𝑎𝑐𝑎𝑐𝑏𝑎𝑏𝑏𝑎𝑏, 𝑎𝑎𝑐𝑎𝑐𝑎𝑐𝑎𝑐𝑏𝑎𝑏𝑏𝑎𝑏</li>
+</ul>
+<p>f. ℒ = {𝑎, 𝑏}³ ∩ Λ</p>
+<p>No existen cadenas que pertenezcan a ℒ, ya que ℒ = ∅.</p>
+<p>g. ℒ = {𝛼𝛼ʳ | 𝛼 ∈ {𝑎, 𝑏}⁺}</p>
+<ul>
+<li>𝑎𝑎, 𝑏𝑏, 𝑎𝑏𝑏𝑎, 𝑏𝑎𝑎𝑏, 𝑎𝑎𝑎𝑎, 𝑏𝑏𝑏𝑏</li>
+</ul>
+<p>h. ℒ = {𝛼 ∈ {𝑎, 𝑏}⁺ | 𝛼 = 𝛼ʳ}</p>
+<ul>
+<li>𝑎, 𝑏, 𝑎𝑏𝑎, 𝑏𝑎𝑏, 𝑎𝑏𝑏𝑎, 𝑏𝑎𝑎𝑏, 𝑏𝑎𝑏𝑎𝑏, 𝑎𝑏𝑎𝑏𝑎</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 7.</strong><br>
+Definir por comprensión los siguientes lenguajes:<br>
+a. ℒ₁ = {𝑎𝑏, 𝑎𝑎𝑏𝑏, 𝑎𝑎𝑎𝑏𝑏𝑏, …}</p>
+<ul>
+<li>ℒ₁ = {𝑎ⁿ𝑏ⁿ | 𝑛 ≥ 1}</li>
+</ul>
+<p>b. ℒ₂ = {𝑎𝑎𝑏, 𝑎𝑎𝑎𝑎𝑏𝑏, 𝑎𝑎𝑎𝑎𝑎𝑎𝑏𝑏𝑏, …}</p>
+<ul>
+<li>ℒ₂ = {𝑎²ⁿ𝑏ⁿ | 𝑛 ≥ 1}</li>
+</ul>
+<p>c. ℒ₃ = {𝑎𝑎𝑎𝑏𝑐𝑐𝑐, 𝑎𝑎𝑎𝑎𝑏𝑐𝑐𝑐𝑐, 𝑎𝑎𝑎𝑎𝑎𝑎𝑏𝑐𝑐𝑐𝑐𝑐, …}<br>
+(donde el «crecimiento» en la cantidad de cada símbolo es lineal en cada caso).</p>
+<ul>
+<li>ℒ₃ = {𝑎ⁿ𝑏𝑐ⁿ | 𝑛 ≥ 3}</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 8.</strong><br>
+Dados ℒ₁ = {𝑎, 𝑏𝑐}, ℒ₂ = {𝑎𝑎𝑎, 𝑏𝑐}, y siendo Λ = {𝜆}, calcular:<br>
+a. ℒ₁ ∪ ℒ₂</p>
+<ul>
+<li>ℒ₁ ∪ ℒ₂ = {𝑎, 𝑏𝑐} ∪ {𝑎𝑎𝑎, 𝑏𝑐} = {𝑎, 𝑏𝑐, 𝑎𝑎𝑎}</li>
+</ul>
+<p>b. ℒ₁ ∩ ℒ₂</p>
+<ul>
+<li>ℒ₁ ∩ ℒ₂ = {𝑎, 𝑏𝑐} ∩ {𝑎𝑎𝑎, 𝑏𝑐} = {𝑏𝑐}</li>
+</ul>
+<p>c. ℒ₁.ℒ₂</p>
+<ul>
+<li>ℒ₁.ℒ₂ = {𝑎𝑎𝑎𝑎, 𝑎𝑏𝑐, 𝑏𝑐𝑎𝑎𝑎, 𝑏𝑐𝑏𝑐}</li>
+</ul>
+<p>d. ℒ₁.(ℒ₂)⁰</p>
+<ul>
+<li>ℒ₁.(ℒ₂)⁰ = ℒ₁.Λ = ℒ₁ = {𝑎, 𝑏𝑐}</li>
+</ul>
+<p>e. ℒ₁.(ℒ₂)²</p>
+<ul>
+<li>ℒ₁.(ℒ₂)² = ℒ₁.ℒ₂.ℒ₂ = (ℒ₁.ℒ₂).ℒ₂ = {𝑎𝑎𝑎𝑎𝑎𝑎𝑎, 𝑎𝑎𝑎𝑎𝑏𝑐, 𝑎𝑏𝑐𝑎𝑎𝑎, 𝑎𝑏𝑐𝑏𝑐, 𝑏𝑐𝑎𝑎𝑎𝑎𝑎𝑎, 𝑏𝑐𝑎𝑎𝑎𝑏𝑐, 𝑏𝑐𝑏𝑐𝑎𝑎𝑎, 𝑏𝑐𝑏𝑐𝑏𝑐}</li>
+</ul>
+<p>f. ℒ₁.(ℒ₂)⁺</p>
+<ul>
+<li>ℒ₁.(ℒ₂)⁺ = ℒ₁.ℒ₂ = {𝑎𝑎𝑎𝑎, 𝑎𝑏𝑐, 𝑏𝑐𝑎𝑎𝑎, 𝑏𝑐𝑏𝑐}</li>
+</ul>
+<p>g. (ℒ₁.ℒ₂)⁺</p>
+<ul>
+<li>(ℒ₁.ℒ₂)⁺ = {𝑎𝑎𝑎𝑎, 𝑎𝑏𝑐, 𝑏𝑐𝑎𝑎𝑎, 𝑏𝑐𝑏𝑐, 𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎, 𝑎𝑎𝑎𝑎𝑎𝑏𝑐, 𝑎𝑎𝑎𝑎𝑏𝑐𝑎𝑎𝑎…} = (ℒ₁.ℒ₂)¹ ∪ (ℒ₁.ℒ₂)² ∪ (ℒ₁.ℒ₂)³…</li>
+</ul>
+<p>h. (ℒ₁.ℒ₂)∗</p>
+<ul>
+<li>(ℒ₁.ℒ₂)∗ = (ℒ₁.ℒ₂)⁺ ∪ {𝜆} = {𝜆, 𝑎𝑎𝑎𝑎, 𝑎𝑏𝑐, 𝑏𝑐𝑎𝑎𝑎, 𝑏𝑐𝑏𝑐, 𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎, 𝑎𝑎𝑎𝑎𝑎𝑏𝑐, 𝑎𝑎𝑎𝑎𝑏𝑐𝑎𝑎𝑎…} = (ℒ₁.ℒ₂)⁰ ∪ (ℒ₁.ℒ₂)¹ ∪ (ℒ₁.ℒ₂)² ∪ (ℒ₁.ℒ₂)³…</li>
+</ul>
+<p>i. ℒ₁.Λ.ℒ₂</p>
+<ul>
+<li>ℒ₁.Λ.ℒ₂ = ℒ₁.ℒ₂ = {𝑎𝑎𝑎𝑎, 𝑎𝑏𝑐, 𝑏𝑐𝑎𝑎𝑎, 𝑏𝑐𝑏𝑐}</li>
+</ul>
+<p>j. ℒ₁⌀ℒ₂</p>
+<ul>
+<li>ℒ₁∅ℒ₂ = ∅</li>
+</ul>
+<p>k. (ℒ₁)ʳ</p>
+<ul>
+<li>(ℒ₁)ʳ = {(𝑎)ʳ, (𝑏𝑐)ʳ} = {𝑎, 𝑐𝑏}</li>
+</ul>
+<p>l. (ℒ₁.ℒ₂)ʳ</p>
+<ul>
+<li>(ℒ₁.ℒ₂)ʳ = {(𝑎𝑎𝑎𝑎)ʳ, (𝑎𝑏𝑐)ʳ, (𝑏𝑐𝑎𝑎𝑎)ʳ, (𝑏𝑐𝑏𝑐)ʳ} = {𝑎𝑎𝑎𝑎, 𝑐𝑏𝑎, 𝑎𝑎𝑎𝑐𝑏, 𝑐𝑏𝑐𝑏}</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 9.</strong><br>
+Determinar el complemento de los siguientes lenguajes, considerando los alfabetos indicados en cada caso.<br>
+a. ℒ = Λ para Σ = {𝑎, 𝑏}</p>
+<ul>
+<li>ℒ ᶜ = ℒ ∗ - Λ = ℒ ∗ - {𝜆} = ℒ ⁺</li>
+</ul>
+<p>b. ℒ = {𝜆, 𝑎} para Σ = {𝑎} y Σ = {𝑎, 𝑏}</p>
+<ul>
+<li>Para Σ = {𝑎} : ℒ ᶜ = ℒ ∗ - ℒ  = ℒ ∗ - {𝜆, 𝑎} = {𝑎𝑎, 𝑎𝑎𝑎, 𝑎𝑎𝑎} = {𝑎ⁿ | 𝑛 ≥ 2}</li>
+<li>Para Σ = {𝑎, 𝑏} : ℒ ᶜ = ℒ ∗ - ℒ  = ℒ ∗ - {𝜆, 𝑎} = {𝑎ⁿ | 𝑛 ≥ 2} ∪ {𝑎ⁿ𝑏ᵐ | 𝑛 ≥ 0 ∧ 𝑚 ≥ 1}</li>
+</ul>
+<p>c. ℒ = {𝑏𝛼 | 𝛼 ∈ {𝑎, 𝑏}∗} para Σ = {𝑎, 𝑏}</p>
+<ul>
+<li>ℒ ᶜ = ℒ ∗ - ℒ = ℒ ∗ - {𝑏𝛼 | 𝛼 ∈ {𝑎, 𝑏}∗} = {𝑎𝛼 | 𝛼 ∈ {𝑎, 𝑏}∗} ∪ {𝜆}</li>
+</ul>
+<p>d. ℒ = {𝑎²ⁿ | 𝑛 ≥ 0} para Σ = {𝑎} y Σ = {𝑎, 𝑏}</p>
+<ul>
+<li>Para Σ = {𝑎} : ℒ ᶜ = ℒ ∗ - ℒ  = ℒ ∗ - {𝑎²ⁿ | 𝑛 ≥ 0} = {𝑎²ⁿ⁺¹ | 𝑛 ≥ 0}</li>
+<li>Para Σ = {𝑎, 𝑏} : ℒ ᶜ = ℒ ∗ - ℒ  = ℒ ∗ - {𝑎²ⁿ | 𝑛 ≥ 0} = {𝑎²ⁿ⁺¹ | 𝑛 ≥ 0} ∪ {𝛼 ∈ {𝑎, 𝑏}∗ | |𝛼|<sub>𝑏</sub> ≥ 1}</li>
+</ul>
+<p>e. ℒ = {𝛼₁𝑏𝛼₂ | 𝛼₁, 𝛼₂ ∈ {𝑎, 𝑏}∗ ∧ |𝛼₁| &gt; |𝛼₂|} para Σ = {𝑎, 𝑏}</p>
+<ul>
+<li>ℒ ᶜ = ℒ ∗ - ℒ = ℒ ∗ - {𝛼₁𝑏𝛼₂ | 𝛼₁, 𝛼₂ ∈ {𝑎, 𝑏}∗ ∧ |𝛼₁| &gt; |𝛼₂|} = {𝛼 ∈ {𝑎, 𝑏}∗ | |𝛼|<sub>𝑏</sub> = 0} ∪ {𝛼₁𝑏𝛼₂ | 𝛼₁, 𝛼₂ ∈ {𝑎, 𝑏}∗ ∧ |𝛼₁| ≤ |𝛼₂|}</li>
+</ul>
+<hr>
+<p><strong>Ejercicio 10.</strong><br>
+Sea ℒ, ℒ₁, ℒ₂ lenguajes cualesquiera. Determinar si las siguientes afirmaciones son verdaderas o falsas. Si son verdaderas, demostrarlas. Si no, dar un contraejemplo.<br>
+a. ℒ ⁺ ⊆ ℒ ⁺</p>
+<p>Verdadera. Todo conjunto es subconjunto de sí mismo.</p>
+<p>b. ℒ ⁺ ⊊ ℒ ∗</p>
+<p>Falso. Contraejemplo: ℒ = {𝜆, 𝑎}. {𝜆, 𝑎}⁺ = {𝜆, 𝑎}∗.</p>
+<p>c. ℒ ⁿℒ ᵐ = ℒ ⁿ⁺ᵐ para todo 𝑛, 𝑚 ≥ 0</p>
+<p>Veradero. Por inducción en n:</p>
+<ul>
+<li>Caso base: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">0</span></span></span></span></span><br>
+ℒ ⁿℒ ᵐ = ℒ ⁰ℒ ᵐ = Λ.ℒ ᵐ = ℒ ᵐ = ℒ ⁰⁺ᵐ = ℒ ⁿ⁺ᵐ</li>
+<li>Caso inductivo: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77777em; vertical-align: -0.08333em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span></span></span></span></span>. Supongo que vale para <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span></span></span></span></span>.<br>
+ℒ ⁿℒ ᵐ = ℒ ᵏ⁺¹ℒ ᵐ = ℒ.ℒ ᵏℒ ᵐ =ᴴᴵ ℒ.ℒ ᵏ⁺ᵐ = ℒ ᵏ⁺¹⁺ᵐ = ℒ ⁿ⁺ᵐ</li>
+</ul>
+<p>d. ℒ ⁿ ⊆ ℒ ⁿ⁺¹ para todo 𝑛 ≥ 0</p>
+<p>Falso. Contraejemplo: ℒ = {𝑎}. ℒ ⁰ = {𝜆}, ℒ ¹ = {𝑎}, {𝜆} ⊄ {𝑎}.</p>
+<p>e. ℒ₁ ⊆ ℒ₂, 𝑛 ≥ 0 ⟹ (ℒ₁)ⁿ ⊆ (ℒ₂)ⁿ</p>
+<p>Veradero. Por inducción en n:</p>
+<ul>
+<li>Caso base: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">0</span></span></span></span></span><br>
+(ℒ₁)⁰ = (ℒ₂)⁰ = Λ</li>
+<li>Caso inductivo: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77777em; vertical-align: -0.08333em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span></span></span></span></span>. Supongo que vale para <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span></span></span></span></span>.<br>
+(ℒ₁)ᵏ⁺¹ = (ℒ₁)ᵏ.ℒ₁, (ℒ₂)ᵏ⁺¹ = (ℒ₂)ᵏ.ℒ₂. Por hipótesis inductiva (ℒ₁)ᵏ ⊆ (ℒ₂)ᵏ, y como ℒ₁ ⊆ ℒ₂, se concluye que (ℒ₁)ᵏ⁺¹ ⊆ (ℒ₂)ᵏ⁺¹ ⇔ (ℒ₁)ⁿ ⊆ (ℒ₂)ⁿ.</li>
+</ul>
+<p>f. ℒ₁ ⊆ ℒ₂ ⟹ (ℒ₁)∗ ⊆ (ℒ₂)∗</p>
+<p>Verdadero. Se deduce de la definición de clausura de Kleene y el inciso anterior.</p>
+<p>g. (ℒ ∗)∗ = ℒ ∗</p>
+<p>Verdadero. Probemos la doble inclusión:</p>
+<ul>
+<li>ℒ ∗ ⊆ (ℒ ∗)∗<br>
+Sea 𝑥 ∈ ℒ ∗, 𝑥 es una concatenación de cadenas de ℒ, así que 𝑥 ∈ (ℒ ∗)∗.</li>
+<li>(ℒ∗)∗ ⊆ ℒ ∗<br>
+Sea 𝑥 ∈ (ℒ ∗)∗, 𝑥 es una concatenación de cadenas 𝑥 de ℒ, así que 𝑥₁𝑥₂…𝑥ₖ con 𝑥ᵢ ∈ ℒ ∗. Cada 𝑥ᵢ es una concatenación de cadenas de ℒ, así que 𝑥 ∈ ℒ ∗.</li>
+</ul>
+<p>h. (ℒ ⁺)⁺ = ℒ ∗</p>
+<p>Falso. Contraejemplo: ℒ = {𝑎, 𝑏}. 𝜆 ∈ ℒ ∗, pero 𝜆 ∉ (ℒ ⁺)⁺.</p>
+<p>i. (ℒ ⁺)∗ = ℒ ∗</p>
+<p>Verdadero.  Probemos las inclusiones:</p>
+<ul>
+<li>ℒ ⁺ ⊆ ℒ ∗: ℒ ⁺ son todas las cadenas no vacías formadas por ℒ, y ℒ ∗ incluye todas las cadenas, incluyendo la vacía.</li>
+<li>(ℒ ⁺)∗ ⊆ ℒ ∗: las cadenas en (ℒ ⁺)∗ son concatenaciones de cadenas no vacías de ℒ, por lo que están en ℒ ∗.</li>
+<li>ℒ ∗ ⊆ (ℒ ⁺)∗: cualquier cadena de ℒ∗ (incluyendo la vacía) puede ser vista como una concatenación de elementos de (ℒ ⁺)∗.</li>
+</ul>
+<p>j. (ℒ₁ ∪ ℒ₂)∗ = (ℒ₁)∗ ∪ (ℒ₂)∗</p>
+<p>Falso. Contraejemplo: ℒ₁ = {𝑎}, ℒ₂ = {𝑏}, 𝑎𝑏 ∈ (ℒ₁ ∪ ℒ₂)∗, pero 𝑎𝑏 ∉ (ℒ₁)∗ ∪ (ℒ₂)∗.</p>
+<p>k. (ℒ₁ ∩ ℒ₂)∗ = (ℒ₁)∗ ∩ (ℒ₂)∗</p>
+<p>Falso. Contraejemplo: ℒ₁ = {𝑎𝑎, 𝑏}, ℒ₂ = {𝑎, 𝑏𝑏}, (ℒ₁ ∩ ℒ₂)∗ = ∅∗ = {𝜆}, mientras que (ℒ₁)∗ ∩ (ℒ₂)∗ contiene por ejemplo 𝑎𝑎𝑏𝑏, entre otras cadenas.</p>
+<p>l. (ℒ ²)∗ = ℒ ∗</p>
+<p>Falso. Contraejemplo: ℒ = {𝑎}, 𝑎 ∈ ℒ ∗, pero 𝑎 ∉ (ℒ ²)∗.</p>
+<p>m. (ℒ ∪ ℒ₂)∗ = ℒ ∗</p>
+<p>Falso. Contraejemplo: ℒ = {𝑎}, ℒ₂ = {𝑏}, 𝑎𝑏 ∈ (ℒ ∪ ℒ₂)∗, pero 𝑎𝑏 ∉ ℒ ∗.</p>
+<p>n. (ℒ ⁿ)ʳ = (ℒ ʳ)ⁿ para todo 𝑛 ≥ 0</p>
+<p>Verdadero. Por inducción en n:</p>
+<ul>
+<li>Caso base: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">0</span></span></span></span></span><br>
+(ℒ ⁿ)ʳ = (ℒ ⁰)ʳ = Λʳ = Λ = (ℒ ʳ)⁰ = (ℒ ʳ)ⁿ</li>
+<li>Caso inductivo: <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k+1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.77777em; vertical-align: -0.08333em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">1</span></span></span></span></span>. Supongo que vale para <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal">n</span></span></span></span></span> = <span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.69444em; vertical-align: 0em;"></span><span class="mord mathnormal" style="margin-right: 0.03148em;">k</span></span></span></span></span>.<br>
+(ℒ ⁿ)ʳ = (ℒ ᵏ⁺¹)ʳ = (ℒ ᵏℒ )ʳ = ℒ ʳ.(ℒ ᵏ)ʳ =ᴴᴵ ℒ ʳ.(ℒ ʳ)ᵏ = (ℒ ʳ)ᵏ⁺¹ = (ℒ ʳ)ⁿ</li>
+</ul>
+<p>ñ. (ℒ∗)ʳ = (ℒ ʳ)∗</p>
+<p>Verdadero. Se deduce de la definición de clausura de Kleene y el inciso anterior.</p>
+<hr>
+<p><strong>Ejercicio 11.</strong><br>
+Siendo:<br>
+• Sub(ℒ): subcadenas del lenguaje ℒ.<br>
+• Ini(ℒ): subcadenas iniciales (prefijos) del lenguaje ℒ.<br>
+• Fin(ℒ): subcadenas finales (sufijos) del lenguaje ℒ.<br>
+Demostrar que, si ℒ₁ y ℒ₂ son lenguajes:<br>
+a. Fin(Fin(ℒ₁)) = Fin(ℒ₁)</p>
+<p>Lo probamos por doble inclusión:</p>
+<ul>
+<li>⊆) Si 𝑥 ∈ Fin(Fin(ℒ₁)), ∃𝑦 ∈ Fin(ℒ₁) tal que 𝑥 es sufijo de 𝑦, y ∃𝑧 ∈ ℒ₁ tal que 𝑦 es sufijo de 𝑧. Por transitivad  𝑥 es sufijo de 𝑧 ⇒ 𝑥 ∈ Fin(ℒ₁).</li>
+<li>⊇) Directo, ya que ℒ₁ ⊆ Fin(ℒ₁).</li>
+</ul>
+<p>b. Sub(Sub(ℒ₁)) = Sub(ℒ₁)</p>
+<p>Lo probamos por doble inclusión:</p>
+<ul>
+<li>⊆) Si 𝑥 ∈ Sub(Sub(ℒ₁)), ∃𝑦 ∈ Sub(ℒ₁) con 𝑥 subcadena de 𝑦, y ∃𝑧 ∈ ℒ₁ con 𝑦 subcadena de 𝑧 ⇒ 𝑥 ∈ Sub(ℒ₁).</li>
+<li>⊇) Directo, ya que ℒ₁ ⊆ Sub(ℒ₁).</li>
+</ul>
+<p>c. Fin(ℒ₁ℒ₂) = Fin(ℒ₂) ∪ Fin(ℒ₁)ℒ₂</p>
+<p>Lo probamos por doble inclusión:</p>
+<ul>
+<li>⊆) Para 𝑥 ∈ Fin(ℒ₁ℒ₂), 𝑥 es sufijo de 𝑦𝑧 (𝑦 ∈ ℒ₁, y 𝑧 ∈ ℒ₂). Hay dos casos:
+<ul>
+<li>Caso 1: Si 𝑥 es sufijo de 𝑧 ⇒ 𝑥 ∈ Fin(ℒ₂).</li>
+<li>Caso 2: Si no, 𝑥 = 𝑤𝑧 con 𝑤 sufijo de 𝑦 ⇒ 𝑥 ∈ Fin(ℒ₁)ℒ₂.</li>
+</ul>
+</li>
+<li>⊇)
+<ul>
+<li>Fin(ℒ₂) ⊆ Fin(ℒ₁ℒ₂) (tomar 𝑦 = 𝜆).</li>
+<li>Fin(ℒ₁)ℒ₂ ⊆ Fin(ℒ₁ℒ₂) (si 𝑤 ∈ Fin(ℒ₁), ∃𝑦 ∈ ℒ₁ con 𝑤 sufijo de 𝑦; luego 𝑤𝑧 es sufijo de 𝑦𝑧).</li>
+</ul>
+</li>
+</ul>
+<p>d. Ini(ℒ₁ ∪ ℒ₂) = Ini(ℒ₁) ∪ Ini(ℒ₂)</p>
+<p>Lo probamos por doble inclusión:</p>
+<ul>
+<li>⊆) 𝑥 ∈ Ini(ℒ₁ ∪ ℒ₂) ⇒ 𝑥 es prefijo de alguna cadena en ℒ₁ o ℒ₂.</li>
+<li>⊇) Trivial por definición de unión.</li>
+</ul>
+<p>e. Fin(ℒ₁ ∪ ℒ₂) = Fin(ℒ₁) ∪ Fin(ℒ₂)</p>
+<p>Análogo al inciso d, pero para sufijos.</p>
+<p>f. Ini(Sub(ℒ₁)) = Sub(Ini(ℒ₁)) = Fin(Sub(ℒ₁)) = Sub(Fin(ℒ₁)) = Sub(ℒ₁)</p>
+<ul>
+<li>Sub(ℒ₁) ya contiene todos los prefijos, sufijos y subcadenas de ℒ₁.</li>
+<li>Aplicar Ini, Fin o Sub no añade nada nuevo:</li>
+<li>Sub(Ini(ℒ₁)) ⊆ Sub(ℒ₁) (las subcadenas de prefijos son subcadenas).</li>
+<li>Análogo para sufijos.</li>
+</ul>
+<hr>
+</div>
+</body>
+
+</html>
